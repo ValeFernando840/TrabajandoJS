@@ -1,3 +1,80 @@
+/*Introducción ¿Ques es JavaScript?
+	-Lenguaje de programación
+	-Interpretado
+	-Orientado a Objetos
+	-Imperativo
+	-Case sensitive (Upper and lower case)
+	-Basado en prototipos/ instancias/ classless
+	-tipado debil (un var puede pasar de int a float a string etc.)
+	-Lenguaje dinamico (la var se adapta al dato).
+	-ECMASCRIPT (5.1 6 7, 8, Next)
+
+
+Formas de Enlazar Javascript
+	- En linea
+	- Como contenido en la etiqueta <script>
+	- Como contenido en un archivo de formato .js
+	- Con un Require
+	
+Variables
+	-Una variable espacio que se aloja en memoria
+	- Tipos de Datos: string, number, boolean 
+	- Tipo de dato no primitivo: symbol
+	- Casos especiales: Undefined, Null, Nan
+	- Scope
+	- Hosting
+	- Tipos de Variables (Let, Var, Const)
+	- Crear multiples variables (separandolas con coma) -> Let nombre1= "Jorge", nombre2 ="pedro"
+
+	Variables
+	- use let
+	- No puede comenzar con número
+	- No puede llevar guion medio, ni tener espacios
+	
+	Tipos de Datos
+	-Primitives:
+		numbers -int/float use poit 1.5 example
+		** uso para potencia
+		Strings
+			let firtString="holi";
+			interpolacion de texto `${firstString} ${secondString}` 
+		boolean	
+			true false
+		Null
+			let iAnNull = null;
+		Undefined
+			let iAmUndefined
+
+		Symbol & BigInt (big integer)
+
+		Inmutables
+		let batr= 'bar'
+		console.log('Bar inmutable ==>', bar);
+		let barMayus= bar.toUpperCase();
+		
+	-Objetos o Compuestos:
+
+
+  =>variables let var const
+  *let tiene menos alcance 
+  *var es de alcance global
+  *const se usa para definir una variable que no cambiara a lo largo del programa(cte)
+
+  => declaración e inicialización
+  let num; <== se declaro una variable num
+  num = 10; <== se inicializo una variable con el valor 10
+  let num=10; <== se declaro y inicializo una variable num con valor 10
+  si solo se declara su valor por defecto es Undefined
+
+  => Scope es el alcance un de una variable
+  =>NaN Not a Number
+
+  =>concat sirve para realizar concatenación pero para ello es necesario que almenos uno se
+  de tipo string (definido como metodo de cadena)
+   
+  
+  */
+
 // let numero1 = "53";
 // let numero2 = 8;
 // let resultado;
@@ -126,32 +203,37 @@ terminos de memoria que llamar a una función multiples veces. */
 
 /*OBJETOS */
 
-const b = {};
-console.log(b);
-const c = new Object();
-console.log(c);
-/*Dentro de un objeto a las variables se les van a 
-llamar atributos/ propiedades y a las funciones se
-les llama métodos */
-const Alexis = {
-  nombre: "Alexis",
-  apellido: "Vale",
-  edad: 26,
-  pasatiempos: ["correr", "programar", "estudiar", "jugar"],
-  estadoCivil: "soltero",
-  contacto: {
-    email: "vale.alexis18@gmail.com",
-    facebook: "vale alexis",
-    movil: "381-3522293",
-  },
-  saludar: function () {
-    console.log("hola: ");
-  },
-};
+// const b = {};
+// console.log(b);
+// const c = new Object();
+// console.log(c);
+// /*Dentro de un objeto a las variables se les van a
+// llamar atributos/ propiedades y a las funciones se
+// les llama métodos */
+// const Alexis = {
+//   nombre: "Alexis",
+//   apellido: "Vale",
+//   edad: 26,
+//   pasatiempos: ["correr", "programar", "estudiar", "jugar"],
+//   estadoCivil: "soltero",
+//   contacto: {
+//     email: "vale.alexis18@gmail.com",
+//     facebook: "vale alexis",
+//     movil: "381-3522293",
+//   },
+//   saludar: function () {
+//     console.log("hola: ");
+//   },
+// };
 
-console.log(Alexis);
-console.log(Alexis.nombre);
+// console.log(Alexis);
+// console.log(Alexis.nombre);
+
+// console.log(Object.keys(Alexis)); //permite listar todas las llaves del objeto.
+// console.log(Object.values(Alexis)); //devuelve los valores del objeto
+// console.log(Alexis.hasOwnProperty("nombre"));//retorna true o false si tiene o no la propiedad "nombre"
 //=============================================================================
+
 //For
 // for (let i = 0; i < 10; i++) {
 //   //hacer algo
@@ -162,3 +244,28 @@ console.log(Alexis.nombre);
 // for (mascota in animales) {
 //   document.write(animales[mascota] + "<br/>");
 // }
+//==============================================================================
+
+/*Manejo de Errores -TRY CATCH FINALLY */
+
+try {
+  console.log("En el Try se agrega el código a evaluar");
+  noExiste;
+} catch (error) {
+  console.log("Catch, captura cualquier error surgido o lanzado en el Try");
+} finally {
+  console.log(
+    "el bloque finally se ejecutará siempre al final de un bloque TRY-CATCH"
+  );
+}
+
+try {
+  let numero = 10;
+
+  if (isNaN(numero)) {
+    throw new Error("El caracter introducido no es un Numero");
+  }
+  console.log(numero * numero);
+} catch (error) {
+  console.log(`Se produjo el siguiente error ${error}`);
+}
