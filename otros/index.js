@@ -103,6 +103,18 @@ console.log(c.toFixed(2)); //cantidad de num decimales y redondea
 console.log(parseInt(c)); //devuelve solo la parte entera
 console.log(parseFloat(c)); //devuelve el flotante completo
 
+/*FUNCIONES DECLARADAS VS FUNCIONES EXPRESADAS*/
+funcionDeclarada();
+
+function funcionDeclarada() {
+  console.log(`esta es una función declarada, puede invocarse en cualquier
+  parte de nuestro código, incluso antes de que la funcion sea declarada.`);
+}
+
+funcionDeclarada();
+//============================================================================
+
+
 //For
 // for (let i = 0; i < 10; i++) {
 //   //hacer algo
