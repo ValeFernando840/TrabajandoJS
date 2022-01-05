@@ -94,34 +94,71 @@ terminos de memoria que llamar a una función multiples veces. */
 //======================================================================
 //Numbers
 
-let a = 4;
-let b = new Number(1);
-let c = 4.719;
-console.log(a, b);
-console.log(c.toFixed(2)); //cantidad de num decimales y redondea
+// let a = 4;
+// let b = new Number(1);
+// let c = 4.719;
+// console.log(a, b);
+// console.log(c.toFixed(2)); //cantidad de num decimales y redondea
 
-console.log(parseInt(c)); //devuelve solo la parte entera
-console.log(parseFloat(c)); //devuelve el flotante completo
+// console.log(parseInt(c)); //devuelve solo la parte entera
+// console.log(parseFloat(c)); //devuelve el flotante completo
 
 /*FUNCIONES DECLARADAS VS FUNCIONES EXPRESADAS*/
-funcionDeclarada();
+// funcionDeclarada();
 
-function funcionDeclarada() {
-  console.log(`esta es una función declarada, puede invocarse en cualquier
-  parte de nuestro código, incluso antes de que la funcion sea declarada.`);
-}
+// function funcionDeclarada() {
+//   console.log(`esta es una función declarada, puede invocarse en cualquier
+//   parte de nuestro código, incluso antes de que la funcion sea declarada.`);
+// }
 
-funcionDeclarada();
+// funcionDeclarada();
+// funcionExpresada(); // se llama antes de ser inilizalizada.
+// //funcion anonima
+// const funcionExpresada = function(){
+//   console.log(`Esto es una función explresada,es decir,
+//   una función que se le ha asignado como valor una variable, si invocamos esta función antes de su definicion JS
+//   nos dirá "Can not access 'funcionExpresada'
+//   before initialization"`);
+// }
+// funcionExpresada();
+
 //============================================================================
 
+/*OBJETOS */
 
+const b = {};
+console.log(b);
+const c = new Object();
+console.log(c);
+/*Dentro de un objeto a las variables se les van a 
+llamar atributos/ propiedades y a las funciones se
+les llama métodos */
+const Alexis = {
+  nombre: "Alexis",
+  apellido: "Vale",
+  edad: 26,
+  pasatiempos: ["correr", "programar", "estudiar", "jugar"],
+  estadoCivil: "soltero",
+  contacto: {
+    email: "vale.alexis18@gmail.com",
+    facebook: "vale alexis",
+    movil: "381-3522293",
+  },
+  saludar: function () {
+    console.log("hola: ");
+  },
+};
+
+console.log(Alexis);
+console.log(Alexis.nombre);
+//=============================================================================
 //For
 // for (let i = 0; i < 10; i++) {
 //   //hacer algo
 // }
 
 //For in
-let animales = ["gato", "perro", "otroGato"];
-for (mascota in animales) {
-  document.write(animales[mascota] + "<br/>");
-}
+// let animales = ["gato", "perro", "otroGato"];
+// for (mascota in animales) {
+//   document.write(animales[mascota] + "<br/>");
+// }
