@@ -246,26 +246,72 @@ terminos de memoria que llamar a una función multiples veces. */
 // }
 //==============================================================================
 
-/*Manejo de Errores -TRY CATCH FINALLY */
+// /*Manejo de Errores -TRY CATCH FINALLY */
 
-try {
-  console.log("En el Try se agrega el código a evaluar");
-  noExiste;
-} catch (error) {
-  console.log("Catch, captura cualquier error surgido o lanzado en el Try");
-} finally {
-  console.log(
-    "el bloque finally se ejecutará siempre al final de un bloque TRY-CATCH"
-  );
+// try {
+//   console.log("En el Try se agrega el código a evaluar");
+//   noExiste;
+// } catch (error) {
+//   console.log("Catch, captura cualquier error surgido o lanzado en el Try");
+// } finally {
+//   console.log(
+//     "el bloque finally se ejecutará siempre al final de un bloque TRY-CATCH"
+//   );
+// }
+
+// try {
+//   let numero = 10;
+
+//   if (isNaN(numero)) {
+//     throw new Error("El caracter introducido no es un Numero");
+//   }
+//   console.log(numero * numero);
+// } catch (error) {
+//   console.log(`Se produjo el siguiente error ${error}`);
+// }
+
+// //Destructuración de Objetos y Arreglos
+// const numeros = [1, 2, 3];
+// //Sin destructuración
+// let uno = numeros[0],
+//   dos = numeros[1],
+//   tres = numeros[2];
+// console.log(uno, dos, tres);
+// //Con destruturación
+// const [one, two, three] = numeros;
+// console.log(one, two, three);
+
+// let persona = {
+//   nombre: "Alex",
+//   apellido: "Vale",
+//   edad: "26 ",
+// };
+
+// let { nombre, apellido, edad } = persona;
+// console.log(nombre, apellido, edad);
+
+/*OBJETOS LITERALES */
+let nombre = "koko";
+edad = 16;
+/**El nombre de la propiedad es igual al nombre de la variable */
+const dog = {
+  nombre,
+  edad,
+  raza: "nose",
+  ladrarFuncion() {
+    console.log("ladrar");
+  },
+};
+
+/**PARÁMETROS REST & OPERADOR SPREAD*/
+//Los parametros Rest son una forma de ir agregando parametros inf
+
+function sumar(a, b, ...c) {
+  let resultado = a + b;
+  c.forEach(function (n) {
+    resultado += n;
+  });
+
+  return resultado;
 }
-
-try {
-  let numero = 10;
-
-  if (isNaN(numero)) {
-    throw new Error("El caracter introducido no es un Numero");
-  }
-  console.log(numero * numero);
-} catch (error) {
-  console.log(`Se produjo el siguiente error ${error}`);
-}
+console.log(sumar(1, 2, 7, 5, 5));
