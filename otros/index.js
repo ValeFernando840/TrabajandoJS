@@ -291,34 +291,76 @@ terminos de memoria que llamar a una función multiples veces. */
 // console.log(nombre, apellido, edad);
 
 /*OBJETOS LITERALES */
-let nombre = "koko";
-edad = 16;
-/**El nombre de la propiedad es igual al nombre de la variable */
-const dog = {
-  nombre,
-  edad,
-  raza: "nose",
-  ladrarFuncion() {
-    console.log("ladrar");
-  },
-};
+// let nombre = "koko";
+// edad = 16;
+// /**El nombre de la propiedad es igual al nombre de la variable */
+// const dog = {
+//   nombre,
+//   edad,
+//   raza: "nose",
+//   ladrarFuncion() {
+//     console.log("ladrar");
+//   },
+// };
 
 /**PARÁMETROS REST & OPERADOR SPREAD*/
 //Los parametros Rest son una forma de ir agregando parametros inf
 
-function sumar(a, b, ...c) {
-  let resultado = a + b;
-  c.forEach(function (n) {
-    resultado += n;
-  });
+// function sumar(a, b, ...c) {
+//   let resultado = a + b;
+//   c.forEach(function (n) {
+//     resultado += n;
+//   });
 
-  return resultado;
-}
-console.log(sumar(1, 2, 7, 5, 5));
+//   return resultado;
+// }
+// console.log(sumar(1, 2, 7, 5, 5));
 
-const arr1 = [1, 2, 3, 4, 5],
-  arr2 = [6, 7, 8, 9, 0];
-console.log(arr1, arr2);
+// const arr1 = [1, 2, 3, 4, 5],
+//   arr2 = [6, 7, 8, 9, 0];
+// console.log(arr1, arr2);
 
-const arr3 = [...arr1, ...arr2]; //spread operator
-console.log(arr3);
+// const arr3 = [...arr1, ...arr2]; //spread operator
+// console.log(arr3);
+
+/**Funciones Flecha/Arrow Function */
+
+const saludar = (nombre) => {
+  console.log(`hola ${nombre}`);
+};
+
+saludar("maria");
+
+// const sumar= function(a,b){
+// 	return a+b;
+// };
+
+const sumar2 = (a, b) => a + b;
+
+console.log(sumar2(8, 9));
+
+const funcionDeVariasLineas = () => {
+  console.log("Uno");
+  console.log("Dos");
+  console.log("Tres");
+};
+
+funcionDeVariasLineas();
+
+const numeros = [1, 2, 3, 4, 5];
+
+numeros.forEach(function (popo, index) {
+  console.log(`El elemento ${popo} esta en la posición ${index}`);
+});
+//con arrow function
+numeros.forEach((popo, index) => {
+  console.log(`El elemento ${popo} esta en la posición ${index}`);
+});
+
+const perro = {
+  nombre: "kenai",
+  ladrar: () => {
+    console.log(this);
+  },
+};
+perro.ladrar();
