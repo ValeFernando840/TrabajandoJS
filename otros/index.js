@@ -272,11 +272,13 @@ terminos de memoria que llamar a una función multiples veces. */
 
 // //Destructuración de Objetos y Arreglos
 // const numeros = [1, 2, 3];
+
 // //Sin destructuración
 // let uno = numeros[0],
 //   dos = numeros[1],
 //   tres = numeros[2];
 // console.log(uno, dos, tres);
+
 // //Con destruturación
 // const [one, two, three] = numeros;
 // console.log(one, two, three);
@@ -290,6 +292,7 @@ terminos de memoria que llamar a una función multiples veces. */
 // let { nombre, apellido, edad } = persona;
 // console.log(nombre, apellido, edad);
 
+////======================================================================
 /*OBJETOS LITERALES */
 // let nombre = "koko";
 // edad = 16;
@@ -302,7 +305,7 @@ terminos de memoria que llamar a una función multiples veces. */
 //     console.log("ladrar");
 //   },
 // };
-
+////==========================================================================
 /**PARÁMETROS REST & OPERADOR SPREAD*/
 //Los parametros Rest son una forma de ir agregando parametros inf
 
@@ -323,44 +326,106 @@ terminos de memoria que llamar a una función multiples veces. */
 // const arr3 = [...arr1, ...arr2]; //spread operator
 // console.log(arr3);
 
+////===============================================================
 /**Funciones Flecha/Arrow Function */
 
-const saludar = (nombre) => {
-  console.log(`hola ${nombre}`);
-};
+// const saludar = (nombre) => {
+//   console.log(`hola ${nombre}`);
+// };
 
-saludar("maria");
+// saludar("maria");
 
 // const sumar= function(a,b){
 // 	return a+b;
 // };
 
-const sumar2 = (a, b) => a + b;
+// const sumar2 = (a, b) => a + b;
 
-console.log(sumar2(8, 9));
+// console.log(sumar2(8, 9));
 
-const funcionDeVariasLineas = () => {
-  console.log("Uno");
-  console.log("Dos");
-  console.log("Tres");
-};
+// const funcionDeVariasLineas = () => {
+//   console.log("Uno");
+//   console.log("Dos");
+//   console.log("Tres");
+// };
 
-funcionDeVariasLineas();
+// funcionDeVariasLineas();
 
-const numeros = [1, 2, 3, 4, 5];
+// const numeros = [1, 2, 3, 4, 5];
 
-numeros.forEach(function (popo, index) {
-  console.log(`El elemento ${popo} esta en la posición ${index}`);
-});
-//con arrow function
-numeros.forEach((popo, index) => {
-  console.log(`El elemento ${popo} esta en la posición ${index}`);
-});
+// numeros.forEach(function (popo, index) {
+//   console.log(`El elemento ${popo} esta en la posición ${index}`);
+// });
+// //con arrow function
+// numeros.forEach((popo, index) => {
+//   console.log(`El elemento ${popo} esta en la posición ${index}`);
+// });
 
-const perro = {
-  nombre: "kenai",
-  ladrar: () => {
-    console.log(this);
-  },
-};
-perro.ladrar();
+// const perro = {
+//   nombre: "kenai",
+//   ladrar: () => {
+//     console.log(this);
+//   },
+// };
+// perro.ladrar();
+
+//=====================================================================
+/**PROTOTIPOS */
+/*Clases: es un modelo a seguir 
+	Objetos - Es una instancia de una clase
+		*Atributos - es una característica o propiedad del objeto (variables dentro de un objeto)
+		*Metodos - son las acciones que un objeto puede realizar 
+	 */
+
+/*metodos agregados al prototipo de la funcion*/
+// Animal.prototype.sonar = function () {
+//   console.log("hago sonidos por que estoy vivo");
+// };
+
+// //constructor
+// function Animal(nombre, genero) {
+//   this.nombre = nombre;
+//   this.genero = genero;
+// }
+
+// const snoopy = new Animal("Snoopy", "machote");
+// const lolaBunny = new Animal("lola bunny", "machota");
+
+// console.log(snoopy);
+// snoopy.sonar();
+
+//===========================================================================
+/*Herencia Prototípica */
+// Animal.prototype.sonar = function () {
+//   console.log("hago sonidos por que estoy vivo");
+// };
+// //constructor
+// function Animal(nombre, genero) {
+//   this.nombre = nombre;
+//   this.genero = genero;
+// }
+
+// function Perro(nombre, genero, tamanio) {
+//   this.super = Animal;
+//   this.super(nombre, genero);
+//   this.tamanio = tamanio;
+// }
+// //Perro esta heredando de animal
+// Perro.prototype = new Animal();
+// Perro.prototype.constructor = Perro;
+
+// //Sobreescritura de métodos del prototipo padre en hijo
+// Perro.prototype.sonar = function () {
+//   console.log("soy un perro y mi sonido es un ladrido");
+// };
+// Perro.prototype.ladrar = function () {
+//   console.log("FFFFFFFFFFFF");
+// };
+
+// const snoopy = new Perro("Snoopy", "Macho", "Mediano");
+// const lolaBunny = new Animal("Lola Bunny", "Hembra");
+
+// console.log(snoopy);
+// console.log(lolaBunny);
+
+//===============================================================

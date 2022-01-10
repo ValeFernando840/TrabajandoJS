@@ -7,7 +7,84 @@
     <title>Document</title>
   </head>
   <body>
-    
     <script src="./index.js"></script>
+    <script src="./index2.js"></script>
+
+    <script>
+      // //Clases y Herencia
+      // class Animal {
+      //   constructor(nombre, genero) {
+      //     /*El constructor es un método especial
+      //                               que se ejecuta en el momento de instanciar la clase*/
+      //     this.nombre = nombre;
+      //     this.genero = genero;
+      //   }
+      //   //Metodos
+      //   sonar() {
+      //     console.log("Hago sonidos por que estoy vivo");
+      //   }
+      //   saludar() {
+      //     console.log(`Hola me llamo ${this.nombre}`);
+      //   }
+      // }
+      // class Perro extends Animal {
+      //   constructor(nombre, genero, tamanio) {
+      //     super(nombre, genero);
+      //     this.tamanio = tamanio;
+      //     this.raza = null;
+      //   }
+      //   sonar() {
+      //     console.log("Soy un perro y mi sonido es un ladrido");
+      //   }
+      //   ladrar() {
+      //     console.log("guau guau");
+      //   }
+      //   //Un metodo estático se puede ejecutar sin necesidad de instanciar la clase
+      //   static queEres() {
+      //     console.log(`Los perros somos animales mamíferos que pertenecemos a la familia
+      //     de los caninos. Somos considerados los mejores amigos del hombre`);
+      //   }
+
+      //   /*Los Setters y Getters son métodos especiales que nos
+      //   permiten establecer y obtener los valores de atributos de nuestra clase*/
+      //   get getRaza() {
+      //     return this.raza;
+      //   }
+      //   set setRaza(raza) {
+      //     this.raza = raza;
+      //   }
+      // }
+      // Perro.queEres();
+
+      // const mimi = new Animal("mimi", "hembra");
+      // const scooby = new Perro("Scooby", "Macho", "grande");
+
+      // console.log(mimi);
+      // console.log(scooby);
+
+      // mimi.saludar();
+      // mimi.sonar();
+      // scooby.saludar();
+      // scooby.ladrar();
+
+      // scooby.setRaza = "Gran Danés";
+      // console.log("La raza es: " + scooby.getRaza); //Se lo trata como si fuese un atributo y no una función
+
+      //Objeto Console
+      console.log(console);
+      console.error("este es un error");
+      console.warn("este es un aviso ");
+      console.info("este es un msj informativo");
+
+      let nombre = "alexis",
+        apellido = "Vale",
+        edad = 26;
+
+      console.log(
+        "Mi nombre es: %s , apellido: %s, edad: %s años" + nombre,
+        apellido,
+        edad
+      );
+    </script>
   </body>
 </html>
