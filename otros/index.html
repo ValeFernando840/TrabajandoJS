@@ -70,21 +70,51 @@
       // scooby.setRaza = "Gran Danés";
       // console.log("La raza es: " + scooby.getRaza); //Se lo trata como si fuese un atributo y no una función
 
-      //Objeto Console
-      console.log(console);
-      console.error("este es un error");
-      console.warn("este es un aviso ");
-      console.info("este es un msj informativo");
+      // //Objeto Console
+      // console.log(console);
+      // console.error("este es un error");
+      // console.warn("este es un aviso ");
+      // console.info("este es un msj informativo");
 
-      let nombre = "alexis",
-        apellido = "Vale",
-        edad = 26;
+      // let nombre = "alexis",
+      //   apellido = "Vale",
+      //   edad = 26;
 
-      console.log(
-        "Mi nombre es: %s , apellido: %s, edad: %s años" + nombre,
-        apellido,
-        edad
-      );
+      // console.log(
+      //   "Mi nombre es: %s , apellido: %s, edad: %s años" + nombre,
+      //   apellido,
+      //   edad
+      // );
+      // console.clear();
+      //=====================================================================
+      /*OBJETO DATE*/
+
+      console.log(Date);
+      let fecha = new Date();
+      console.log(fecha);
+      //día del mes
+      console.log(fecha.getMonth());
+      //día de la semana D L M Mi J V S -> 0 1 2 3 4 5 6
+      console.log(fecha.getDay());
+
+      console.log(fecha.getFullYear());
+
+      console.log(fecha.getHours());
+      console.log(fecha.getMinutes());
+      console.log(fecha.getSeconds());
+
+      console.log(fecha.toString());
+      console.log(fecha.toDateString());
+      console.log(fecha.toLocaleString());
+
+      /*para saber más ingresar: https://momentjs.com/ */
+
+      //Objeto Math
+      console.log(math);
+      console.log(Math.PI);
+      console.log(Math.abs(-7.8));
+      console.log(Math.ceil(7.2));
+      console.log(Math.floor(7.8));
     </script>
   </body>
 </html>
