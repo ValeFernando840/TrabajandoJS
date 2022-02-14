@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                   Transient Analysis of Ejercicio2 Lab                   ***
-***                           07/10/2021 18:53:36                            ***
+***                           14/02/2022 16:22:00                            ***
 ********************************************************************************
 Limits
 ======
@@ -33,7 +33,7 @@ Node         Voltage  Node         Voltage  Node         Voltage
 DC Operating Point Inductor Current
 ===================================
 Inductor     Current 
-L1           43.299p 
+L1           36.371p 
 
 
 Operating Point for Devices of Type Diode
@@ -139,12 +139,12 @@ vgs                  0.000          0.000
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:                 R1             R2         X1.Rc1         X1.Rc2
-V                  -216.496n       216.496n      -347.053m      -347.118m
+V                  -181.857n       181.857n      -347.053m      -347.118m
 Power DC Terms:
-PD                4.687E-019         0.009f        68.110u        68.136u
+PD                    0.002f         0.007f        68.110u        68.136u
 
 DC Pin Currents:
-Ir                   -2.165p        43.299p      -196.254u      -196.291u
+Ir                   -9.093p        36.371p      -196.254u      -196.291u
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
@@ -165,12 +165,12 @@ tc2                   0.000          0.000          0.000          0.000
 
 
 Instance:              X1.R2         X1.Ro2      X1.ROUTAC
-V                  -867.343n         3.065m         2.274n
+V                  -867.334n         3.065m         2.274n
 Power DC Terms:
-PD                    0.008f       375.875n     1.034E-019
+PD                    0.008f       375.866n     1.034E-019
 
 DC Pin Currents:
-Ir                   -8.673p       122.617u        45.470p
+Ir                   -8.673p       122.616u        45.470p
 
 Device Variables:
 tc1                   0.000          0.000          0.000 
@@ -181,12 +181,12 @@ tc2                   0.000          0.000          0.000
 Operating Point for Devices of Type Inductor
 ============================================
 Instance:                 L1
-V                     0.003f
+V                     0.000 
 Power DC Terms:
-PS                1.502E-028
+PS                    0.000 
 
 DC Pin Currents:
-Il                   43.299p
+Il                   36.371p
 
 Device Variables:
 ic                    0.000 
@@ -232,16 +232,16 @@ State                   LIN
 Operating Point for Devices of Type SPICE Poly
 ==============================================
 Instance:             X1.I3          X1.V2          X1.V1          X1.I1
-V                    3.065m         0.000         45.472n       867.343n
+V                    3.065m         0.000         45.470n       867.334n
 Power DC Terms:
-PG                 375.875n         0.000      4.135E-027        32.076f
+PG                 375.866n         0.000      4.135E-027        32.075f
 
 DC Pin Currents:
-ISource           -122.617u        -2.545u    -9.094E-020       -36.982n
+ISource           -122.616u        -2.545u    -9.094E-020       -36.982n
 
 
 Instance:             X1.I2
-V                 -867.343n
+V                 -867.334n
 Power DC Terms:
 PG                 -32.068f
 
@@ -267,7 +267,7 @@ Power DC Terms:
 PG                 400.200p       400.200p         0.000         20.136m
 
 DC Pin Currents:
-ISource            -20.010p       -20.010p        45.472p        -1.678m
+ISource            -20.010p       -20.010p        45.470p        -1.678m
 
 
 Instance:                V2

@@ -4,10 +4,10 @@ Version=10.01
 Program=Micro-Cap
 Component Version=10.00
 Shape Version=10.01
-Screen=1536,864
+Screen=1366,768
 MCAPVersion=10.0.9.2
 Key ID=1 834 914 165
-NLCnt=48
+NLCnt=43
 TXCnt=0
 
 [shapedef]
@@ -166,7 +166,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=45
+Used=47
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -185,7 +185,7 @@ Pin="Plus",6,0,-4,-5
 Pin="Minus",0,0,-10,-5
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 0,0,1119,426
+Window Placement=2,3, -1,-1, -8,-31, 52,52,1053,434
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -225,7 +225,7 @@ NodeVoltageFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=0,1, -1,-1, -8,-31, 26,-11,1371,426
+Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 52,52,1053,434
 SpiceType=AMBIGUOUS
 Block Select Color=#51F998
 TitleBlock Field_1=$name
@@ -258,7 +258,7 @@ Style=8192
 
 [Attr]
 ON=-32,-21,RESISTANCE
-V=20k
+V=10k
 Style=8192
 
 [Attr]
@@ -277,7 +277,7 @@ Style=8192
 
 [Attr]
 ON=-36,-18,RESISTANCE
-V=1k
+V=5k
 Style=8192
 
 [Attr]
@@ -335,7 +335,7 @@ Style=8192
 
 [Attr]
 ON=-36,-36,CAPACITANCE
-V=100n
+V=47n
 Style=8192
 
 [Attr]
@@ -381,7 +381,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Grids=39,33,40,33
+Grids=39,33,41,33
 
 [Wire]
 Grids=41,33,41,35
@@ -507,38 +507,6 @@ Grids=65,44,65,45
 
 [Wire]
 Grids=63,44,65,44
-
-[Wire]
-Grids=40,15,40,33
-
-[Wire]
-Grids=40,33,41,33
-
-[Comp]
-Name=Battery
-Grid=33,21
-Rot=3
-
-[Attr]
-ON=-24,-25,PART
-V=V3
-Style=8192
-
-[Attr]
-ON=-18,-37,VALUE
-V=3
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Grids=33,15,40,15
-
-[Comp]
-Name=Ground
-Grid=33,21
-Rot=7
 
 [Schematic]
 CurrentSection 0=0
@@ -686,9 +654,9 @@ Name=Main
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=0,42
+SB 3=91,162
 Scale 3=0.5
-Grid=33,21
+Grid=62,25
 
 [Page]
 Index=1
@@ -705,7 +673,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=19,4
+SB 0=0,4
 
 [Page]
 Index=3
@@ -721,6 +689,9 @@ Page=1
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 Background Color=#FFFFFF
+Text=.OPTIONS ITL4=50
+Text=.OPTIONS ITL1=250
+Text=.OPTIONS PIVREL=1
 
 [Text Area]
 Section=0
@@ -735,7 +706,7 @@ Text=.MODEL 0 ISWITCH ()
 Text=.MODEL 8 ISWITCH ()
 
 [Transient]
-Window Placement=0,1, -1,-1, -8,-31, 23,253,1368,690
+Window Placement=2,3, -1,-1, -8,-31, 52,52,1053,434
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -952,8 +923,8 @@ Seed=0
 
 [Limits]
 Analysis=Transient
-TRange=1000m
-TStep=0
+TRange=150m
+TStep=1u
 NPts=51
 Temp=27
 RetraceRuns=1
