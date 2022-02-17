@@ -144,13 +144,13 @@ console.log("========>>>>EJERCICIO10");
 console.log(`Convertir una array a una string. Una función tomará una array
    de strings y se convertirá en una única string.\n\n`);
 const array3 = ["es", "de", "noche", "y", "tengo", "hambre", "mal!"];
-
+console.log("Entrada: ", array3);
 const transformToString = (array) => array.join(" ");
 
 console.log("Salida: ", transformToString(array3));
 
 // 11) Acá encontrarán más ejercicios: https://youtu.be/PescFjv1UXM
-console.log("========>>>>EJERCICIO10");
+console.log("========>>>>EJERCICIO11");
 console.log("EN OTRA OCASIÓN CON MAS CALMITA...");
 //
 
@@ -160,23 +160,70 @@ console.log(" \n\nTAREA #10\n\n");
 // Ejemplo: [1,2,3,4, 5] => [1, 5]
 console.log("========>>>>EJERCICIO1");
 const array4 = [1, 2, 3, 4, 5];
+console.log("Entrada: ", array);
 
 const maxAndMin = (array) => {
-  let array2 = [];
-  array2.push(Math.max(...array));
-  return array2.push(Math.min(...array));
+  let arrayMaxMin = [];
+  arrayMaxMin.push(Math.max(...array));
+  arrayMaxMin.push(Math.min(...array));
+  return arrayMaxMin;
 };
 console.log("Salida: ", maxAndMin(array4));
 // Escribir una función que tome dos parámetros. una string y un caracter. La función debe devolver cuántas veces aparece ese caracter en la string. Si el caracter no aparece en la string debe retornar false.
 // Ejemplo: ("hola mundo", "o") => 2 veces.
+console.log("========>>>>EJERCICIO2");
+const palabra = "hola mundo, de nuevo!";
+const caracter = "o";
+console.log("Entrada: ", palabra);
+const contarCaracter = (palabra, caracter) => {
+  let contador = 0;
+  for (let i = 0; i < palabra.length; i++) {
+    if (caracter === palabra[i]) {
+      contador++;
+    }
+  }
+  if (contador == 0) {
+    return false;
+  }
+  contador = contador + " veces";
+  return contador;
+};
 
+console.log("Salida: ", contarCaracter(palabra, caracter));
 // Limpiar una array. Debemos crear una función que tome una array de múltiples datos y que solo devuelva los strings dentro de la array.
 // Ejemplo: [1, 'hola', 2, true, 'mundo'] => ['hola', 'mundo']
+console.log("========>>>>EJERCICIO3");
+const array5 = [1, "hola", 2, true, "mundo"];
+console.log("Entrada: ", array5);
+const limpiarArray = (array) => {
+  let salida = [];
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] == "string") {
+      salida.push(array[i]);
+    }
+  }
+  return salida;
+};
 
+console.log("Salida", limpiarArray(array5));
 // Contar vocales. Crear una función que cuente la cantidad de vocales que posee una palabra.
+console.log("========>>>>EJERCICIO4");
+const nuevaPalabra = "hola mundo por enesima vez XD mas vocales";
+const vocales = "aeiou";
+console.log("Entrada: ", nuevaPalabra);
+const contarVocales = (palabra) => {
+  let cantidadVocales = 0;
+  for (const letra of palabra) {
+    if (vocales.includes(letra.toLowerCase())) {
+      cantidadVocales++;
+    }
+  }
+  return cantidadVocales;
+};
 
+console.log("Salida: ", contarVocales(nuevaPalabra));
 // Escribir una función que quite todos las vocales de una string.
 // Ejemplo: (banana) => bnn
-
+console.log("========>>>>EJERCICIO5");
 // Quitar los duplicados de una array. Escribir una función que tome una array por parámetros y quite todos los valores duplicados.
 // Ejemplo: [1, 1, 2,2, true, true, 'hola', 'mundo', 'hola] => [1, 2, true, hola, mundo]
