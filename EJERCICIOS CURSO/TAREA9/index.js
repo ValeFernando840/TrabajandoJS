@@ -225,5 +225,48 @@ console.log("Salida: ", contarVocales(nuevaPalabra));
 // Escribir una función que quite todos las vocales de una string.
 // Ejemplo: (banana) => bnn
 console.log("========>>>>EJERCICIO5");
+const palabra3 = "banana manzana pera frutilla helado ok no!";
+console.log("Entrada: ", palabra3);
+const vocales2 = "aeiou";
+
+const quitarVocales = (palabra) => {
+  let nuevaPalabra1 = "";
+  for (const letra of palabra) {
+    if (!vocales2.includes(letra.toLowerCase())) {
+      nuevaPalabra1 += letra;
+    }
+  }
+  return nuevaPalabra1;
+};
+console.log("Salida: ", quitarVocales(palabra3));
 // Quitar los duplicados de una array. Escribir una función que tome una array por parámetros y quite todos los valores duplicados.
 // Ejemplo: [1, 1, 2,2, true, true, 'hola', 'mundo', 'hola] => [1, 2, true, hola, mundo]
+
+const ultimoArray = [
+  1,
+  1,
+  2,
+  2,
+  true,
+  true,
+  "hola",
+  "mundo",
+  "hola",
+  false,
+  false,
+];
+
+console.log("Entrada:", ultimoArray);
+const eliminarDuplicados = (array) => {
+  let unicos = [];
+  for (let i = 0; i < array.length; i++) {
+    if (!unicos.includes(array[i])) {
+      unicos.push(array[i]);
+    }
+  }
+  return unicos;
+};
+
+console.log("Salida: ", eliminarDuplicados(ultimoArray));
+
+console.log("FIN PERRITO :-)...");
