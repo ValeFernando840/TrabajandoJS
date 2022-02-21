@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                   Transient Analysis of ejercicio1TBJ                    ***
-***                           20/02/2022 21:56:16                            ***
+***                           21/02/2022 17:55:24                            ***
 ********************************************************************************
 Limits
 ======
@@ -27,58 +27,58 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
-1            12.000   2             1.596   3             5.373  
-4           915.947m  5             5.373  
+1            12.000   2             1.614   3             5.241  
+4           932.620m  5             5.241  
 
 DC Operating Point Inductor Current
 ===================================
 Inductor     Current 
-L1            0.000  
+L1       -4.337E-019 
 
 
 Operating Point for Devices of Type Bipolar Junction Transistors NPN
 ====================================================================
 Instance:                Q1
-Using model:         2N2222
+Using model:         BC548B
 
 Beta Terms:
-BETADC             192.503 
-BETAAC             198.803 
+BETADC             282.372 
+BETAAC             281.207 
 
 Capacitance Terms:
-CPI                177.303p
-CMU                 13.009p
+CPI                 96.978p
+CMU                  3.600p
 CBX                  0.000 
 CJS                  0.000 
 
 Conductance Terms:
-GM                 163.003m
+GM                 164.012m
 
 Current Terms:
-IB                  21.516u
-IC                   4.142m
+IB                  14.960u
+IC                   4.224m
 
 Resistance Terms:
-RPI                  1.220K
+RPI                  1.715K
 RX                   0.000 
-RO                  25.056K
+RO                  24.532K
 
 Voltage Terms:
-VBE                679.871m
-VBC                 -3.777 
-VCE                  4.457 
+VBE                681.284m
+VBC                 -3.627 
+VCE                  4.309 
 
 Frequency Terms:
-FT               136.316MEG
+FT               259.534MEG
 
 Power DC Terms:
-PD                  18.475m
+PD                  18.211m
 PS                   0.000 
 
 DC Pin Currents:
-Ib                  21.516u
-Ic                   4.142m
-Ie                  -4.163m
+Ib                  14.960u
+Ic                   4.224m
+Ie                  -4.239m
 Is                   0.000 
 
 Condition:
@@ -94,12 +94,12 @@ vce                  0.000
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:                 R1             R2             R3             R4
-V                    10.404          1.596          6.627        915.947m
+V                    10.386          1.614          6.759        932.620m
 Power DC Terms:
-PD                    5.412m       795.823u        27.448m         3.813m
+PD                    5.394m       813.964u        28.550m         3.954m
 
 DC Pin Currents:
-Ir                  520.209u       498.693u         4.142m         4.163m
+Ir                  519.305u       504.345u         4.224m         4.239m
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
@@ -115,7 +115,7 @@ Power DC Terms:
 PS                    0.000 
 
 DC Pin Currents:
-Il                    0.000 
+Il               -4.337E-019
 
 Device Variables:
 ic                    0.000 
@@ -125,7 +125,7 @@ ic                    0.000
 Operating Point for Devices of Type Capacitor
 =============================================
 Instance:                 C1             C2             C3
-V                     5.373         -5.373          3.777 
+V                     5.241         -5.241          3.627 
 Power DC Terms:
 PS                    0.000          0.000          0.000 
 
@@ -142,9 +142,9 @@ Operating Point for Devices of Type SPICE Source
 Instance:                V1
 V                   12.000 
 Power DC Terms:
-PG                  55.945m
+PG                  56.922m
 
 DC Pin Currents:
-ISource             -4.662m
+ISource             -4.744m
 
 
