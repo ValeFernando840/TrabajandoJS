@@ -7,7 +7,7 @@ Shape Version=10.01
 Screen=1536,864
 MCAPVersion=10.0.9.2
 Key ID=1 834 914 165
-NLCnt=43
+NLCnt=45
 TXCnt=0
 
 [shapedef]
@@ -109,7 +109,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=7425
-Used=75
+Used=88
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -121,7 +121,7 @@ Name=NPN
 Definition=NPN
 Shape=NPN
 Mask=4097
-Used=16
+Used=17
 memo=NPN Transistor
 Label Offset=28,-13,-5,23
 PinCnt=3
@@ -134,7 +134,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=4865
-Used=17
+Used=27
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -146,7 +146,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=36
+Used=51
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -157,7 +157,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6913
-Used=42
+Used=51
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -169,7 +169,7 @@ Name=Inductor
 Definition=Inductor
 Shape=Inductor
 Mask=7681
-Used=11
+Used=13
 memo=Inductor
 Label Offset=18,9,11,12
 PinCnt=2
@@ -486,10 +486,7 @@ Grids=75,33,79,33
 Grids=75,33,75,34
 
 [Wire]
-Grids=62,23,80,23
-
-[Wire]
-Grids=80,23,80,25
+Grids=80,22,80,25
 
 [Wire]
 Grids=80,25,84,25
@@ -530,6 +527,31 @@ Grids=36,26,36,43
 
 [Wire]
 Grids=36,26,39,26
+
+[Comp]
+Name=Capacitor
+Grid=74,22
+Rot=2
+
+[Attr]
+ON=-26,-24,PART
+V=C4
+Style=8192
+
+[Attr]
+ON=-30,-36,CAPACITANCE
+V=10n
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Grids=62,22,68,22
+
+[Wire]
+Grids=74,22,80,22
 
 [Schematic]
 CurrentSection 0=0
@@ -677,9 +699,9 @@ Name=Main
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=249,96
+SB 3=194,96
 Scale 3=0.5
-Grid=85,45
+Grid=80,23
 
 [Page]
 Index=1

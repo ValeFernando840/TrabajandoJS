@@ -8,4 +8,22 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%, -50%);
+  text-align: center;
+}
+
+.my-class2 {
+  background: green;
+}
+
+.button {
+  background-color: red;
+  color: white;
+}
+
+.container {
+  display: flex;
+}
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
 }
