@@ -1,0 +1,9 @@
+Tamaños de pantalla que trabaja boostrap:
+
+breakpoint	Class inflix	Dimensions
+X-small		None		<576px
+small 		sm		>=576px
+medium		md		>=768px
+Large		lg		>=992px
+Extra large	xl		>=1200px
+Extra	ExtraLarge xxl		>=1400px
