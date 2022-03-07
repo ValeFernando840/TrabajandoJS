@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form id="login-form">
+      <div>
+        <label>Nombre de Usuario</label><br />
+        <input type="text" name="name" id="nameInput" />
+      </div>
+      <div>
+        <label>Password</label><br />
+        <input type="password" name="password" id="passInput" />
+      </div>
+      <div>
+        <button type="submit">Enviar</button>
+      </div>
+    </form> -->
+
+    <!-- Ejercicio -->
+    <form id="comments-form">
+      <div>
+        <label>Nombre de Usuario</label><br />
+        <input
+          placeholder="hola mundo "
+          type="text"
+          name="name"
+          id="nameInput"
+        />
+        <p id="nameError" class="error-msg hide">El nombre es Obligatorio</p>
+      </div>
+      <div>
+        <label>Comentario</label><br />
+        <textarea type="comment" id="commentInput"></textarea>
+        <p id="commentError" class="error-msg hide">
+          El Comentario es Obligatorio
+        </p>
+      </div>
+      <div>
+        <button type="submit">Login</button>
+      </div>
+      <div id="comments"></div>
+    </form>
+    <script src="./forms.js"></script>
+  </body>
+</html>
