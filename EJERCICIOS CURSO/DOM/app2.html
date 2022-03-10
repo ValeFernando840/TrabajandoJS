@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .eventos-flujo div {
+        padding: 4rem;
+        font-size: 2rem;
+        text-align: center;
+      }
+      .uno {
+        background: yellow;
+      }
+      .dos {
+        background: gold;
+      }
+      .tres {
+        background: lightyellow;
+      }
+    </style>
   </head>
   <body>
+    <div class="eventos-flujo">
+      <div class="uno">
+        1
+        <div class="dos">
+          2
+          <div class="tres">3</div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <input placeholder="Nombre" />
+      <button type="submit">Enviar</button>
+    </form>
     <script src="./app2.js"></script>
   </body>
 </html>
