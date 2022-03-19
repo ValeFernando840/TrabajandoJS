@@ -45,7 +45,6 @@ const whereAmI = async (country) => {
 };
 whereAmI("portugal").then((city) => console.log(city));
 //console.log("city =>", city);
-
 //C => Create => POST
 //R=>Retrieve =>asociado con GET
 //U => Update => PATCH/PUT
@@ -56,3 +55,4 @@ whereAmI("portugal").then((city) => console.log(city));
 //M => Modificación
 
 //Node: es una manera de correr js del lado del servidor
+//para iniciar el server : json-server --watch db.json --port 4000
