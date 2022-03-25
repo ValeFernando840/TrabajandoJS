@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+body {
+  background-image: url(./images/login1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto; /* keep center */
+  position: relative;
+}
+
+.back_box {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(7px);
+  background-color: #00ff6a4d;
+}
+
+.back_box div {
+  margin: 100px 40px;
+  color: white;
+  transition: all 500ms;
+}
+.back_box div p,
+.back_box div button {
+  margin-top: 30px;
+}
+
+.back_box div h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.back_box button {
+  padding: 1rem 3rem;
+  border: 1px solid #fff;
+  background: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: all 300ms;
+}
+.back_box button:hover {
+  background: white;
+  color: #128f06bd;
+}

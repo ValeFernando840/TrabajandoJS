@@ -7,7 +7,27 @@
     <title>Document</title>
   </head>
   <body>
-    <h2>JSON => JAVA SCRIPT OBJECT NOTATION</h2>
+    <div class="container">
+      <h1 style="text-align: center">Todo App</h1>
+      <ul id="result"></ul>
+      <button id="get-todo-btn">Traer los todos</button>
+      <div>
+        <h3>Formulario</h3>
+        <form id="todoForm">
+          <div>
+            <label for="todoInput">Nombre:</label><br />
+            <input type="text" placeholder="Añadir Nombre" id="todoInput" />
+          </div>
+          <div>
+            <label for="authorInput">Autor:</label><br />
+            <input type="text" placeholder="Añadir tarea" id="authorInput" />
+          </div>
+          <button type="submit">Crear</button>
+        </form>
+      </div>
+      <h3>Editar</h3>
+      <div id="todoListContainer"></div>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>

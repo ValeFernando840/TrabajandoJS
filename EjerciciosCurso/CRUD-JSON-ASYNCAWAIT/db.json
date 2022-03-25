@@ -1,9 +1,19 @@
 {
   "todos": [
     {
-      "description": "Prepara la clase",
-      "owner": "Alexis",
+      "owner": "Alexis Editado",
+      "description": "Nueva Clase",
       "id": 1
+    },
+    {
+      "description": "Apuntes",
+      "owner": "Benja",
+      "id": 2
+    },
+    {
+      "owner": "CSS",
+      "description": "Alfredo",
+      "id": 7
     }
   ],
   "users": []
