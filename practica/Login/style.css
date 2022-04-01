@@ -78,15 +78,15 @@ main {
 }
 .container_login_register form {
   width: 100%;
-  padding: 80px 20px;
+  padding: 1.5rem 2rem; /*80px 20px*/
   background: white;
   position: absolute;
-  border-radius: 20px;
+  border-radius: 1rem;
 }
 .container_login_register form h2 {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0.5rem;
   color: #128f06bd;
 }
 .container_login_register form input {
@@ -101,7 +101,7 @@ main {
 
 .container_login_register form button {
   padding: 10px 40px;
-  margin-top: 40px;
+  margin-top: 20px;
   border: none;
   font-size: 1.1rem;
   background-color: #128f06bd;
@@ -115,6 +115,16 @@ main {
 }
 .form_register {
   display: none;
+}
+
+/* validaciones */
+.form_input_error{
+  font-size: 12px;
+  margin:0;
+  display:block;
+}
+.form_validacion_estado{
+
 }
 
 @media screen and (max-width: 850px) {

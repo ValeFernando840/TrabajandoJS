@@ -59,3 +59,38 @@ function widthPage() {
     cont_login_register.style.left = "0px";
   }
 }
+
+// Validación
+
+const inputs = document.querySelectorAll(".form_register input");
+
+const expressions = {
+  usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+  nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+  password: /^.{4,12}$/, // 4 a 12 digitos.
+  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+};
+
+const campos = {
+  usuario: false,
+  nombre: false,
+  password: false,
+  correo: false,
+  telefono: false,
+};
+events();
+function events() {}
+
+const validarFormulario=(e)=>{
+  switch (e.target.name){
+    case "usuario":
+      validarCampo(expressions.usuario,e.target,"usuario");
+  }
+}
+
+// const validarCampo=(expresion,input,campo)=>{
+//   if(expresion.test(input.value)){
+//     document.getEle
+//   }
+// }

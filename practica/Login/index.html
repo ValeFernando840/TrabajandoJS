@@ -36,12 +36,34 @@
             <input type="password" placeholder="contraseña" />
             <button>Iniciar</button>
           </form>
-          <form action="" class="form_register">
+          <form class="form_register">
             <h2>Regístrarse</h2>
-            <input type="text" placeholder="Nombre Completo" />
-            <input type="email" placeholder="Correo Electrónico" />
-            <input type="text" placeholder="Nombre de Usuario" />
-            <input type="password" placeholder="Contraseña" />
+  
+            <input type="text" placeholder="Nombre Completo" name="nombre" />
+             <p class="form_input_error">
+            El Nombre tiene que ser de 4 a 16 dígitos y solo puede contener
+            números, letras o guion bajo.
+             </p>
+            <input type="text" placeholder="Nombre de Usuario" name="usuario" />
+            <p class="form_input_error">
+            El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+            numeros, letras o guion bajo.
+            </p>
+            <input type="email" placeholder="Correo Electrónico" name="correo"/>
+            <p class="form_input_error">
+            El correo solo puede contener letras, numeros, puntos, guiones y
+            guion bajo.
+            </p>
+
+            <input type="password" placeholder="Contraseña" name="password" />
+            <p class="form_input_error">
+            La contraseña tiene que ser de 4 a 12 dígitos.
+          </p>
+            <input type="password" placeholder="Repetir Contraseña" name="password2"/>
+             
+          <p class="form_input_error">
+            Ambas contraseñas deben ser iguales.
+          </p>
             <button>Registrarse</button>
           </form>
         </div>
@@ -49,5 +71,6 @@
     </main>
 
     <script src="./app.js"></script>
+    
   </body>
 </html>

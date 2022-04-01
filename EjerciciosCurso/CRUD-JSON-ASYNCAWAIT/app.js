@@ -61,6 +61,7 @@
 const API_URL = "http://localhost:4000";
 const todoListContainer = document.querySelector("#todoListContainer");
 const getTodoButton = document.querySelector("#get-todo-btn");
+//seleccion de inputs
 const ownerInput = document.querySelector("#authorInput");
 const descriptionInput = document.querySelector("#todoInput");
 const todoForm = document.querySelector("#todoForm");
