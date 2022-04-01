@@ -79,8 +79,7 @@ const campos = {
   correo: false,
   telefono: false,
 };
-events();
-function events() {}
+
 
 const validarFormulario=(e)=>{
   switch (e.target.name){
@@ -89,8 +88,31 @@ const validarFormulario=(e)=>{
   }
 }
 
-// const validarCampo=(expresion,input,campo)=>{
-//   if(expresion.test(input.value)){
-//     document.getEle
-//   }
-// }
+ const validarCampo=(expresion,input,campo)=>{
+   console.log(campo);
+   if(expresion.test(input.value)){ 
+    document.querySelector(`.grupo_${campo} p`).classList.remove("form_input_error_active");
+    document.querySelector(`.grupo_${campo} input`).classList.add("border_color_green");
+    setTimeout(() => {
+    document.querySelector(`.grupo_${campo} input`).classList.remove("border_color_green")
+    }, 4000);
+    campos[campo]=true;
+  }else{
+    document.querySelector(`.grupo_${campo} p`).classList.add("form_input_error_active");
+    document.querySelector(`.grupo_${campo} input`).classList.remove("border_input_none");
+    document.querySelector(`.grupo_${campo} input`).classList.add("border_color_red");
+    setTimeout(()=>{
+      document.querySelector(`.grupo_${campo} input`).classList.remove("border_color_red");
+      document.querySelector(`.grupo_${campo} input`).classList.add("border_input_none");
+    },4000);
+    campos[campo]=false;
+    }
+}
+
+
+events();
+function events() {
+  inputs.forEach((input) => {
+    input.addEventListener("keyup", validarFormulario);
+  });
+}

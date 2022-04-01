@@ -93,11 +93,11 @@ main {
   width: 100%;
   margin-top: 20px;
   padding: 10px;
-  border: none;
   background: #f2f2f2;
   font-size: 1rem;
   outline: none;
 }
+
 
 .container_login_register form button {
   padding: 10px 40px;
@@ -118,13 +118,24 @@ main {
 }
 
 /* validaciones */
-.form_input_error{
+.form_input_error {
   font-size: 12px;
-  margin:0;
+  margin: 0;
+  display: none;
+}
+.form_input_error_active{
   display:block;
 }
-.form_validacion_estado{
-
+.border_input_none{
+border:none;
+}
+.border_color_red{
+  border: solid;
+  border-color: red;
+}
+.border_color_green{
+  boder:solid;
+  border-color:#128f06bd;
 }
 
 @media screen and (max-width: 850px) {
