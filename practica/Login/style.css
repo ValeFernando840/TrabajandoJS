@@ -118,12 +118,12 @@ main {
 }
 
 /* validaciones */
-.form_input_error {
+.form_input_error { /*mantiene apagado el error*/
   font-size: 12px;
   margin: 0;
   display: none;
 }
-.form_input_error_active{
+.form_input_error_active{ /*para habilitar el error*/
   display:block;
 }
 .border_input_none{
@@ -134,7 +134,7 @@ border:none;
   border-color: red;
 }
 .border_color_green{
-  boder:solid;
+  border:solid;
   border-color:#128f06bd;
 }
 
