@@ -43,6 +43,7 @@ allDivs.forEach((value) => console.log(value));
 console.log(allDivs);
 
 //Crear y añadir elementos o nodos al DOM
+
 //Creación
 // const paragraph = document.createElement("p");
 // paragraph.textContent = "Son un parrafo JS";
