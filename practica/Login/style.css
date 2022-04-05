@@ -123,7 +123,7 @@ main {
   margin: 0;
   display: none;
 }
-.form_input_error_active{ /*para habilitar el error*/
+.form_input_error_active,.activeMsj{ /*para habilitar el error*/
   display:block;
 }
 .border_input_none{
@@ -137,7 +137,9 @@ border:none;
   border:solid;
   border-color:#128f06bd;
 }
-
+.paragraph{
+  display: none;
+}
 @media screen and (max-width: 850px) {
   main {
     margin-top: 50px;

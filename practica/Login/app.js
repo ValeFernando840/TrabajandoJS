@@ -176,6 +176,45 @@ function events() {
   inputs.forEach((input) => {
     input.addEventListener("blur", validarFormulario); /**tambien lo use con keyup */
     input.addEventListener("blur",habilitarBtnRegister);
-    
+
   });
+
 }
+
+const sendData=(e)=>{
+  e.preventDefault();
+  if(campos.nombre && campos.usuario && campos.correo && campos.password){
+    createUser();
+    document.getElementById("msj_exito").classList.remove("paragraph");
+    setTimeout(()=>{
+      document.getElementById("msj_exito").classList.add("paragraph");
+    },3000);
+  }else{
+     document.getElementById("msj_error").classList.remove("paragraph");
+     setTimeout(()=>{
+      document.getElementById("msj_error").classList.add("paragraph");
+    },3000);
+  }
+}
+const API_URL = "http://localhost:4000";
+const createUser=async()=>{
+  try{
+    await fetch(`${API_URL}/usuarios`,{
+      method:"POST",
+      headers:{
+        "Content-type":"application/json",
+      },
+      body:JSON.stringify({
+        nombre:nombre.value,
+        usuario: usuario.value,
+        correo:correo.value,
+        password: password.value,
+        rol: "client",
+      })
+    })
+    form_register.reset();
+  }catch(error){
+    console.log(error);
+  }
+}
+form_register.addEventListener("submit",sendData);
