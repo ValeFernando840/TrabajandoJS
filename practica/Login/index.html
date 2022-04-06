@@ -32,9 +32,10 @@
         <div class="container_login_register">
           <form class="form_login">
             <h2>Iniciar Sesión</h2>
-            <input type="text" placeholder="Usuario" class="border_input_none" onblur="verificar(this)"/>
+      
+            <input type="text" placeholder="Usuario" name="usuario" class="border_input_none" onblur="verificar(this)"/>
             <input type="password" placeholder="Contraseña" class="border_input_none" onblur="verificar(this)" />
-            <button>Iniciar</button>
+            <button type="submit" disabled="true">Iniciar</button>
           </form>
           <form class="form_register">
             <h2>Regístrarse</h2>

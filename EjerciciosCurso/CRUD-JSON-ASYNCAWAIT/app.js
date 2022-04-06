@@ -58,7 +58,7 @@
 //para iniciar el server :
 //npm install -g json-serverr => Se utiliza para simular una BD desde el lado del frontend
 //json-server --watch db.json --port 4000 //sirve para levantar a la BD
-const API_URL = "http://localhost:4000";
+  const API_URL = "http://localhost:4000";
 const todoListContainer = document.querySelector("#todoListContainer");
 const getTodoButton = document.querySelector("#get-todo-btn");
 //seleccion de inputs
