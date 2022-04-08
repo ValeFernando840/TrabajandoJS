@@ -68,6 +68,8 @@ function validarUsuario(usuarios) {
       console.log(usuario.password);
       console.log(passwordLogin.value)
       console.log("el usuario se encuentra en la base.");
+      //debo colocar un break si encuentro el usuario
+    
     } else {
       usuarioCorrecto = false;
       console.log("el usuario NO se encuentra en la base de datos");
