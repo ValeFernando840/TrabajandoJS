@@ -4,6 +4,10 @@ const passwordLogin = document.getElementById("passwordLogin");
 let usuarioCorrecto = false;
 //const form_login=document.querySelector(".form_login");
 
+
+
+//definimos los listening
+form_login.addEventListener("submit", validarEntradas);
 //defino los campos and uso otro Admin
 const campoLogin = {
   usuario: false,
@@ -11,26 +15,57 @@ const campoLogin = {
   admin: false,
 };
 function verificar(entrada) {
-  //console.log("vengo del Verificar", entrada.name)
-
   if (entrada.id == "usuarioLogin") {
     if (expressions.usuario.test(entrada.value)) {
       campoLogin["usuario"] = true;
+      usuarioLogin.classList.remove("border_input_none");
+      usuarioLogin.classList.remove("border_color_red");
+      usuarioLogin.classList.add("border_color_green");
+      viewError("usuario",true);
     } else {
       campoLogin["usuario"] = false;
+      usuario.classLisat.add
+      usuarioLogin.classList.remove()
+      viewError("usuario",false);
     }
   }
   if (entrada.id == "passwordLogin") {
     if (expressions.password.test(entrada.value)) {
       campoLogin["password"] = true;
+      viewError("password",true);
     } else {
       campoLogin["password"] = false;
+      viewError("password",false);
     }
   }
   console.log(campoLogin);
   habilitarBtnIniciar();
 }
+const viewError = async(campo,valor) =>{
+  try{
+    switch (campo){
+      case "usuario":{
+        if(valor==true){
+          
+        }else{
 
+        }
+      break
+      }
+      case "password": {
+        if(valor==true){
+
+        }else{
+
+        }
+      break
+      }
+    }
+  }
+  catch(error){
+    console.log(error);
+  }
+}
 function habilitarBtnIniciar() {
   if (campoLogin.usuario && campoLogin.password) {
     document.querySelector(".form_login button").disabled = false;
@@ -38,8 +73,7 @@ function habilitarBtnIniciar() {
     document.querySelector(".form_login button").disable = true;
   }
 }
-//definimos los listening
-form_login.addEventListener("submit", validarEntradas);
+
 
 function validarEntradas(e) {
   e.preventDefault();

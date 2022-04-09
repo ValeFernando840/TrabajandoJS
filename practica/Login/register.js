@@ -73,9 +73,7 @@ const validarFormulario=(e)=>{
 }
 
   const validarPassword2=()=>{
-  const password1=document.querySelector(".grupo_password input");
-  const password2=document.querySelector(".grupo_password2 input");
-  if(password1.value != password2.value){
+  if(password.value != password2.value){
   document.querySelector(`.grupo_password2 p`).classList.add("form_input_error_active");
   document.querySelector(`.grupo_password2 input`).classList.add("border_color_red");
   document.querySelector(`.grupo_password2 input`).classList.remove("border_color_green")
@@ -113,10 +111,10 @@ events();
 function events() {
   inputs.forEach((input) => {
     input.addEventListener("blur", validarFormulario); /**tambien lo use con keyup */
-    input.addEventListener("blur",habilitarBtnRegister);
+    input.addEventListener("keyup",habilitarBtnRegister);
   });
-  form_register.addEventListener("submit",sendData);
 }
+form_register.addEventListener("submit",sendData);
 
 function sendData(e){
   e.preventDefault();

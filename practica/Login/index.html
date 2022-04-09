@@ -32,11 +32,14 @@
         <div class="container_login_register">
           <form class="form_login">
             <h2>Iniciar Sesión</h2>
-
-            <input type="text" placeholder="Usuario" id="usuarioLogin" class="border_input_none" onblur="verificar(this)"/>
-            <p> El usuario tiene que ser de 8 a 30 digitos y solo puede contener números, letras o guion bajo.</p>
-            <input type="password" placeholder="Contraseña" id="passwordLogin" class="border_input_none" onblur="verificar(this)"/>
-            <p></p>
+            <div class="grupo_usuarioLogin">
+              <input type="text" placeholder="Usuario" id="usuarioLogin" class="border_input_none" onblur="verificar(this)"/>
+              <p class="form_input_error"> El usuario tiene que ser de 8 a 30 digitos y solo puede contener números, letras o guion bajo.</p>
+            </div>
+            <div class="grupo_passwordLogin">
+              <input type="password" placeholder="Contraseña" id="passwordLogin" class="border_input_none" onblur="verificar(this)"/>
+              <p class="form_input_error">La contraseña tiene que ser de 8 a 30 dígitos.</p>
+            </div>
             <button type="submit" disabled="true">Iniciar</button>
           </form>
           <form class="form_register">
