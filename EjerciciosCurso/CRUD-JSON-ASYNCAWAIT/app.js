@@ -171,4 +171,3 @@ function addListeners() {
     }
   });
 }
-//min 52

@@ -1,0 +1,21 @@
+{
+  "users":[
+    {
+      "email": "lcazzullo@gmial.com",
+      "role": "admin",
+      "password": "12345678",
+      "id":1
+    },{
+      "email": "fpistan@gmial.com",
+      "role": "moderator",
+      "password": "12345678",
+      "id":2
+    },
+    {
+      "email": "bjassan@gmial.com",
+      "role": "user",
+      "password": "12345678",
+      "id":3
+    }
+  ]
+}
