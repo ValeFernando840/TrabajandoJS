@@ -41,6 +41,7 @@
               <p class="form_input_error">La contraseña tiene que ser de 8 a 30 dígitos.</p>
             </div>
             <button type="submit" disabled="true">Iniciar</button>
+            <p id="errorInputsLogin" class="form_input_error"><b>Error:</b> El usuario ingresado no se encuentra Registrado...</p>
           </form>
           <form class="form_register">
             <h2>Regístrarse</h2>
@@ -48,8 +49,7 @@
             <div class="grupo_nombre">
               <input type="text" placeholder="Nombre Completo" name="nombre" class="border_input_none"/>
               <p class="form_input_error">
-                El Nombre tiene que ser de 8 a 30 dígitos y solo puede contener
-                números, letras o guion bajo.
+                El Nombre tiene que ser de 8 a 30 dígitos y solo puede contener, letras o guion bajo.
               </p>
             </div>
 
@@ -74,12 +74,7 @@
               </p>
             </div>
             <div class="grupo_password2">
-              <input
-                type="password"
-                placeholder="Repetir Contraseña"
-                name="password2"
-                class="border_input_none"
-              />
+              <input type="password" placeholder="Repetir Contraseña" name="password2" class="border_input_none"/>
               <p class="form_input_error">
                 Ambas contraseñas deben ser iguales.
               </p>

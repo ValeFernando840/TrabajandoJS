@@ -9,7 +9,7 @@ let usuarioCorrecto = false;
 //definimos los listening
 form_login.addEventListener("submit", validarEntradas);
 //defino los campos and uso otro Admin
-const campoLogin = {
+const campoLogin = { //ESTA PARTE CREO QUE NO ES NECESARIO
   usuario: false,
   password: false,
   admin: false,
@@ -18,48 +18,53 @@ function verificar(entrada) {
   if (entrada.id == "usuarioLogin") {
     if (expressions.usuario.test(entrada.value)) {
       campoLogin["usuario"] = true;
+      document.querySelector(".grupo_usuarioLogin p").classList.remove("activeMsj");
       usuarioLogin.classList.remove("border_input_none");
       usuarioLogin.classList.remove("border_color_red");
       usuarioLogin.classList.add("border_color_green");
-      viewError("usuario",true);
+      viewError("usuarioLogin",true);
     } else {
       campoLogin["usuario"] = false;
-      usuario.classLisat.add
-      usuarioLogin.classList.remove()
-      viewError("usuario",false);
+      document.querySelector(".grupo_usuarioLogin p").classList.add("activeMsj");
+      usuarioLogin.classList.remove("border_input_none")
+      usuarioLogin.classList.remove("border_color_green")
+      usuarioLogin.classList.add("border_color_red")
+      viewError("usuarioLogin",false);
     }
   }
   if (entrada.id == "passwordLogin") {
     if (expressions.password.test(entrada.value)) {
       campoLogin["password"] = true;
-      viewError("password",true);
+      document.querySelector(".grupo_passwordLogin p").classList.remove("activeMsj");
+      passwordLogin.classList.remove("border_input_none");
+      passwordLogin.classList.remove("border_color_red");
+      passwordLogin.classList.add("border_color_green");
+      viewError("passwordLogin",true);
     } else {
       campoLogin["password"] = false;
-      viewError("password",false);
+      document.querySelector(".grupo_passwordLogin p").classList.add("activeMsj");
+      passwordLogin.classList.remove("border_input_none");
+      passwordLogin.classList.remove("border_color_green");
+      passwordLogin.classList.add("border_color_red");
+      viewError("passwordLogin",false);
     }
   }
-  console.log(campoLogin);
   habilitarBtnIniciar();
 }
 const viewError = async(campo,valor) =>{
-  try{
-    switch (campo){
-      case "usuario":{
-        if(valor==true){
-          
-        }else{
-
-        }
-      break
-      }
-      case "password": {
-        if(valor==true){
-
-        }else{
-
-        }
-      break
-      }
+  try{ //verifico por valor ya que es mas sencillo por tener solo dos valores
+    if(valor){
+      setTimeout(() => {
+        document.querySelector(`.grupo_${campo} input`).classList.remove("border_color_red");
+        document.querySelector(`.grupo_${campo} input`).classList.remove("border_color_green");
+        document.querySelector(`.grupo_${campo} input`).classList.add("border_input_none");
+      }, 3000);
+    }else{
+      setTimeout(()=>{
+        document.querySelector(`.grupo_${campo} input`).classList.remove("border_color_green");
+        document.querySelector(`.grupo_${campo} input`).classList.remove("border_color_red");
+        document.querySelector(`.grupo_${campo} input`).classList.add("border_input_none");
+      },3000);
     }
   }
   catch(error){
@@ -74,12 +79,9 @@ function habilitarBtnIniciar() {
   }
 }
 
-
 function validarEntradas(e) {
   e.preventDefault();
-  //busco en la base de datos si es correcto el usuario y contraseña
-  console.log("entro al validar!! ");
-  getUsuario();
+  getUsuario();//busco en la base de datos si es correcto el usuario y contraseña
 }
 const getUsuario = async () => {
   try {
@@ -92,21 +94,29 @@ const getUsuario = async () => {
 };
 
 function validarUsuario(usuarios) {
-  usuarios.forEach((usuario) => {
-  
+const currentUser=usuarios.find(usuario=>usuario.usuario == usuarioLogin.value && usuario.password==passwordLogin.value )
+console.log("currentUser",currentUser);
 
-    if (usuarioLogin.value == usuario.usuario && passwordLogin.value == usuario.password) {
-      usuarioCorrecto = true;
-      console.log(usuario.usuario);
-      console.log(usuarioLogin.value);
-      console.log(usuario.password);
-      console.log(passwordLogin.value)
-      console.log("el usuario se encuentra en la base.");
-      //debo colocar un break si encuentro el usuario
-    
-    } else {
-      usuarioCorrecto = false;
-      console.log("el usuario NO se encuentra en la base de datos");
-    }
-  });
+if(currentUser==undefined){
+  document.querySelector("#errorInputsLogin").classList.add("activeMsj");
+  form_login.reset();
+}
+if(currentUser.rol=="admin"){
+  document.querySelector("#errorInputsLogin").classList.remove("activeMsj");
+  window.location.href="./admin.html"
+}else{
+  document.querySelector("#errorInputsLogin").classList.remove("activeMsj");
+  window.location.href="./index.html"
+}
+form_login.reset();
+  // usuarios.forEach((usuario) => {
+  //   if (usuarioLogin.value == usuario.usuario && passwordLogin.value == usuario.password) {
+  //     usuarioCorrecto = true;
+  //     console.log("el usuario se encuentra en la base.");
+  //     //debo colocar un break si encuentro el usuario
+  //   } else {
+  //     usuarioCorrecto = false;
+  //     console.log("el usuario NO se encuentra en la base de datos");
+  //   }
+  // });
 }

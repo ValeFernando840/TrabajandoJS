@@ -9,11 +9,10 @@ const password2=document.querySelector(".grupo_password2 input");
 const API_URL = "http://localhost:4000";
 
 const expressions = {
-  usuario: /^[a-zA-Z0-9\_\-]{8,30}$/, // Letras, numeros, guion y guion_bajo
   nombre: /^[a-zA-ZÀ-ÿ\s]{8,30}$/, // Letras y espacios, pueden llevar acentos.
+  usuario: /^[a-zA-Z0-9\_\-]{8,30}$/, // Letras, numeros, guion y guion_bajo
   password: /^.{8,30}$/, // 8 a 30 digitos.
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  telefono: /^\d{7,14}$/, // 7 a 14 numeros.
 };
 
 const campos = {
@@ -47,13 +46,11 @@ const validarFormulario=(e)=>{
    if(expresion.test(input.value)){ 
     document.querySelector(`.grupo_${campo} p`).classList.remove("form_input_error_active");
     document.querySelector(`.grupo_${campo} input`).classList.remove("border_color_red");
-   
     document.querySelector(`.grupo_${campo} input`).classList.add("border_color_green");
     campos[campo]=true;
   }else{
     document.querySelector(`.grupo_${campo} p`).classList.add("form_input_error_active");
     document.querySelector(`.grupo_${campo} input`).classList.remove("border_color_green");
-   
     document.querySelector(`.grupo_${campo} input`).classList.add("border_color_red");
     campos[campo]=false;
     }
